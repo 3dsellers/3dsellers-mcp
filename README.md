@@ -1,12 +1,18 @@
 <!-- Keywords: eBay MCP server, Amazon MCP server, Shopify MCP server, Etsy MCP server, Walmart MCP server, TikTok Shop MCP server, hosted MCP server for ecommerce, multichannel MCP server, Claude eBay integration, ChatGPT eBay connector, Cursor eBay, Claude Code eBay, eBay listing automation AI, Model Context Protocol ecommerce -->
 
-# 3Dsellers MCP Server
+<p align="center">
+  <a href="https://www.3dsellers.com/channel-integration/3dsellers-mcp"><img src="docs/images/3dsellers-mcp-hero.png" alt="3Dsellers MCP server for eBay, Amazon, Walmart, Etsy, Shopify and TikTok Shop sellers" width="820" /></a>
+</p>
 
-**A hosted MCP server that lets Claude, ChatGPT, Cursor, VS Code and any MCP-compatible AI assistant run your eBay, Amazon, Walmart, Etsy, Shopify and TikTok Shop stores. 150+ tools. Nothing to install, no code and no eBay developer account.**
+# 3Dsellers MCP Server for eBay and Ecommerce Sellers
+
+**The hosted eBay MCP server for ecommerce sellers. Connect Claude, ChatGPT, Cursor, VS Code or any MCP-compatible AI assistant to your eBay, Amazon, Walmart, Etsy, Shopify and TikTok Shop stores, and manage listings, products, inventory, orders and buyer messages from a chat. 150+ tools. Nothing to install, no code and no eBay developer account.**
 
 [![Official MCP Registry](https://img.shields.io/badge/MCP%20Registry-com.3dsellers%2Fmcp-2D72E8)](https://registry.modelcontextprotocol.io/v0/servers?search=3dsellers)
 [![Claude connector directory](https://img.shields.io/badge/Claude-connector%20directory-D97757)](https://claude.ai/new#directory/connectors/3dsellers-mcp)
 [![Cursor Directory](https://img.shields.io/badge/Cursor-Directory-000000)](https://cursor.directory/plugins/3dsellers)
+![eBay](https://img.shields.io/badge/eBay-MCP%20server-E53238)
+![Ecommerce](https://img.shields.io/badge/ecommerce-eBay%20%7C%20Amazon%20%7C%20Walmart%20%7C%20Etsy%20%7C%20Shopify%20%7C%20TikTok%20Shop-2D72E8)
 ![Tools](https://img.shields.io/badge/tools-150%2B-8957e5)
 ![Transport](https://img.shields.io/badge/transport-streamable%20HTTP-blue)
 ![Auth](https://img.shields.io/badge/auth-OAuth%20%7C%20bearer%20token-green)
@@ -19,22 +25,45 @@ Server URL:
 https://api.3dsellers.com/mcp
 ```
 
-3Dsellers keeps one product catalog for every channel you sell on. Connect the MCP server once and your AI assistant can search and create products, publish listings to eBay and your other channels, update inventory and prices, manage orders, run bulk edits and CSV imports, and answer buyer messages, all through your own 3Dsellers account.
+3Dsellers is a multichannel ecommerce platform for eBay sellers. It keeps one product catalog for every channel you sell on. Connect the MCP server once and your AI assistant can search and create products, publish listings to eBay and your other channels, update inventory and prices, manage orders, run bulk edits and CSV imports, and answer buyer messages, all through your own 3Dsellers account.
 
 This repository holds the documentation and config examples. The server itself is hosted by 3Dsellers, so there is no code to run.
 
 ## Contents
 
+- [Features](#features)
+- [Demo](#demo)
 - [Quick start](#quick-start)
 - [Connect your AI assistant](#connect-your-ai-assistant)
+- [MCP client compatibility](#mcp-client-compatibility)
 - [What you can ask](#what-you-can-ask)
 - [Channels](#channels)
 - [Tools](#tools)
 - [Hosted vs a local open-source server](#hosted-vs-a-local-open-source-server)
 - [Security and permissions](#security-and-permissions)
+- [Manage tokens, permissions and requests](#manage-tokens-permissions-and-requests)
 - [Rate limits and pricing](#rate-limits-and-pricing)
+- [Troubleshooting](#troubleshooting)
 - [FAQ](#faq)
 - [Links](#links)
+
+## Features
+
+- **150+ ecommerce tools:** products, listings, item specifics, inventory, prices, orders, tracking, bulk actions, CSV imports, exports, automations, offer rules, listing templates and buyer messages.
+- **eBay and five more channels:** eBay, Amazon, Walmart, Etsy, Shopify and TikTok Shop from one product catalog. Publish a product from one channel to another in one request.
+- **Hosted, nothing to install:** no Node.js, no Docker, no eBay developer account and no marketplace API keys. 3Dsellers keeps the server up to date when marketplace APIs change.
+- **Works with any AI assistant:** Claude, ChatGPT, Grok, Claude Code, Cursor, VS Code, Cline, Gemini CLI, Kiro, Windsurf and any client that supports remote MCP servers.
+- **Sign in with OAuth:** chat apps connect with your 3Dsellers login, with no token to copy. Developer tools can use a bearer token.
+- **You stay in control:** scoped tokens, approval before any tool that changes data, a log of every call, and one-click revoke.
+- **Rate limits handled for you:** clear limits shared by REST and MCP, with `Retry-After` headers and a live usage view.
+- **REST API included:** the same account and token work with the [3Dsellers REST API](https://www.3dsellers.com/channel-integration/3dsellers-api).
+- **Support included:** the 3Dsellers support team helps with setup on every plan.
+
+## Demo
+
+[![Watch: AI and your eBay store with the 3Dsellers MCP server](docs/images/demo-video.jpg)](https://www.youtube.com/watch?v=hqkb0MN3nak)
+
+Watch [3Dsellers MCP in under eight minutes](https://www.youtube.com/watch?v=hqkb0MN3nak): connect Claude, ask about orders, and create and publish a listing.
 
 ## Quick start
 
@@ -42,6 +71,10 @@ This repository holds the documentation and config examples. The server itself i
 2. Add the server URL `https://api.3dsellers.com/mcp` to your AI assistant.
 3. Sign in with your 3Dsellers account (OAuth), or paste a token for developer tools.
 4. Ask: *"What 3Dsellers tools do you have?"*
+
+In 3Dsellers, **Settings > Profile > API / MCP > Connect MCP** shows the server URL and the steps for each assistant:
+
+<p align="center"><img src="docs/images/mcp-dialog.png" alt="The 3Dsellers MCP dialog with the Connect in Claude button, the custom connector steps and the server URL" width="560" /></p>
 
 ## Connect your AI assistant
 
@@ -170,6 +203,23 @@ Windsurf, Codex CLI, Perplexity, Mistral Le Chat and any client that supports re
 Ready-to-copy files are in [`examples/`](examples/).
 
 Step-by-step guide with screenshots: [How to connect AI agents to 3Dsellers using MCP](https://help.3dsellers.com/en/articles/15433466-how-to-connect-ai-agents-to-3dsellers-using-mcp).
+
+## MCP client compatibility
+
+| Client | How to connect | Sign-in |
+| --- | --- | --- |
+| Claude (claude.ai, Claude Desktop, Cowork) | Connector directory, or Settings > Connectors > Add custom connector | OAuth |
+| ChatGPT | Add an app with the server URL | OAuth |
+| Grok | grok.com/connectors > New Connector > Custom | OAuth |
+| Claude Code | `claude mcp add --transport http` | Bearer token |
+| Cursor | [Cursor Directory](https://cursor.directory/plugins/3dsellers) or `~/.cursor/mcp.json` | Bearer token |
+| VS Code (GitHub Copilot) | `.vscode/mcp.json` or MCP: Add Server | Bearer token |
+| Cline | `cline_mcp_settings.json` | Bearer token |
+| Gemini CLI | `gemini extensions install https://github.com/3dsellers/3dsellers-mcp` | OAuth or bearer token |
+| Kiro | `.kiro/settings/mcp.json` | OAuth |
+| Windsurf, Codex CLI, Perplexity, Mistral Le Chat | Server URL `https://api.3dsellers.com/mcp` | OAuth or bearer token |
+
+The server uses streamable HTTP and supports OAuth 2.0 with dynamic client registration, so clients that support MCP sign-in find the login page by themselves.
 
 ## What you can ask
 
@@ -403,6 +453,8 @@ Some eBay MCP servers on GitHub run on your own computer and call the eBay API d
 | --- | --- | --- |
 | Setup | Sign in to 3Dsellers. Nothing to install. | Install Node.js or Python and run it on your computer |
 | eBay developer account | Not needed | Needed |
+| eBay app keys, RuName and token refresh | Not needed | You create and maintain them |
+| Sign in from a chat app (OAuth) | Yes | No |
 | Works in ChatGPT and claude.ai on the web | Yes | No |
 | Works in Claude Desktop, Cursor and VS Code | Yes | Yes |
 | eBay | Yes | Yes |
@@ -411,6 +463,8 @@ Some eBay MCP servers on GitHub run on your own computer and call the eBay API d
 | Bulk actions and CSV imports | Yes | No |
 | Helpdesk and buyer messages | Yes | No |
 | Automations and offer rules | Yes | No |
+| Token scopes, request log and one-click revoke | Yes | No |
+| Rate limits shown live, with `Retry-After` | Yes | Handle eBay `429` errors yourself |
 | Updates when marketplace APIs change | Done by 3Dsellers | You update it yourself |
 | Support | Included in your plan | Community only |
 
@@ -422,6 +476,45 @@ Some eBay MCP servers on GitHub run on your own computer and call the eBay API d
 - Revoke one token, or all tokens at once, on the same page.
 - Never commit a token to a repository. If a token leaks, revoke it and create a new one.
 
+## Manage tokens, permissions and requests
+
+Every AI assistant and integration connects to 3Dsellers with a token. The **API / MCP** page in Settings shows every token, what it is allowed to do, every call it made, and how much of your rate limit is left.
+
+### Connect and create tokens
+
+Open **Settings > Profile > API / MCP**, or go to [app.3dsellers.com/api-mcp](https://app.3dsellers.com/api-mcp).
+
+- **Add to Claude** connects Claude with a sign-in and no token to copy.
+- **Get API token** creates a bearer token for your own script or integration.
+- **Connect MCP** shows the server URL and a token for developer tools such as Cursor, VS Code and Claude Code.
+
+A token is shown only once, when it is created. Copy it right away and keep it private.
+
+<p align="center"><img src="docs/images/api-mcp-tokens-buttons.png" alt="The Tokens tab of the 3Dsellers API / MCP page with the Add to Claude, Get API token and Connect MCP buttons" width="700" /></p>
+
+### See what each token is allowed to do
+
+The **Issued tokens** list shows every token with its scope, status, request count, last use and expiry. The scope is the permission: `product:read` can only read products, `product:write` can change them, and **Full access** means every tool.
+
+- **Revoke** stops one token on its next request.
+- **Revoke all** cuts off every app and AI agent at once. Use it if a token leaked.
+
+<p align="center"><img src="docs/images/api-mcp-issued-tokens.png" alt="The Issued tokens list with scope, status, requests, last used, expiry and the Requests and Revoke buttons" width="820" /></p>
+
+### Review every call the AI made
+
+The **Requests** tab logs every REST API call and every MCP tool call: time, source, tool name, status, duration and the error message when a call failed. Filter by token, source, status or date, and click a row for the full details. Values that look like secrets are shown as `[redacted]`, and only people in your 3Dsellers company can see the log.
+
+<p align="center"><img src="docs/images/api-mcp-requests-log.png" alt="The Requests log with time, source, MCP tool name, status, duration, rate-limit window and error message" width="820" /></p>
+
+### Watch your rate limits
+
+The **Rate limits** tab shows each limit, how much of it you used this minute and today, and when it resets. REST and MCP calls share the same counters.
+
+<p align="center"><img src="docs/images/api-mcp-rate-limits.png" alt="The Rate limits tab with per-minute and per-day usage for each limit and the reset time" width="820" /></p>
+
+Full guide: [API / MCP page: tokens, request log and rate limits](https://help.3dsellers.com/en/articles/17582017-api-mcp-page-tokens-request-log-and-rate-limits).
+
 ## Rate limits and pricing
 
 - **Included in every plan:** the MCP server is part of every 3Dsellers plan, including the free trial.
@@ -429,6 +522,16 @@ Some eBay MCP servers on GitHub run on your own computer and call the eBay API d
 - **Rate limits:** REST and MCP calls share the same counters. Paid plans get 600 calls a minute and 50,000 a day. Per-minute counters reset every 60 seconds, per-day counters at 00:00 UTC.
 
 Current prices: [3dsellers.com/pricing](https://www.3dsellers.com/pricing).
+
+## Troubleshooting
+
+- **The 3Dsellers tools do not show up:** in a chat app, turn the connector on from the **+** menu. In a developer tool, reload the MCP servers or restart the app.
+- **`401 Unauthorized`:** sign in again, or check on the API / MCP page that the token is active and not revoked or expired.
+- **`403 subscription_required`:** the account needs an active 3Dsellers plan or free trial.
+- **`429 Too Many Requests`:** you reached a rate limit. Wait for the time in the `Retry-After` header, and check the **Rate limits** tab.
+- **A tool call failed:** open the **Requests** tab on the API / MCP page. The row shows the tool, the status and the error message.
+- **The sign-in window does not open in a developer tool:** use a bearer token from **Connect MCP** instead.
+- **Still stuck:** email support@3dsellers.com with the time of the call and the tool name.
 
 ## FAQ
 
