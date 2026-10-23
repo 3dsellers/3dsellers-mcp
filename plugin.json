@@ -5,8 +5,21 @@
   "description": "Run eBay, Amazon, Walmart, Etsy, Shopify and TikTok Shop stores from your AI assistant. 150+ tools, hosted, no code.",
   "author": {
     "name": "3Dsellers",
-    "url": "https://www.3dsellers.com"
+    "url": "https://www.3dsellers.com",
+    "email": "support@3dsellers.com"
   },
+  "keywords": [
+    "ebay",
+    "amazon",
+    "walmart",
+    "etsy",
+    "shopify",
+    "ecommerce",
+    "listings",
+    "orders",
+    "inventory"
+  ],
   "license": "MIT",
-  "keywords": ["ebay", "amazon", "walmart", "etsy", "shopify", "ecommerce", "listings", "orders", "inventory"]
+  "homepage": "https://www.3dsellers.com/channel-integration/3dsellers-mcp",
+  "repository": "https://github.com/3dsellers/3dsellers-mcp"
 }
