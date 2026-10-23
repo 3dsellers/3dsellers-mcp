@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "3dsellers": {
+      "url": "https://api.3dsellers.com/mcp"
+    }
+  }
+}
