@@ -137,8 +137,30 @@ Add this to `cline_mcp_settings.json` (Cline > MCP Servers > Configure):
 
 #### Gemini CLI
 
+Install the extension, then sign in with your 3Dsellers account:
+
+```bash
+gemini extensions install https://github.com/3dsellers/3dsellers-mcp
+```
+
+In Gemini CLI, run `/mcp auth 3dsellers` to sign in. Or add the server with a token:
+
 ```bash
 gemini mcp add --transport http --header "Authorization: Bearer YOUR_TOKEN_HERE" 3dsellers https://api.3dsellers.com/mcp
+```
+
+#### Kiro
+
+Add this to `.kiro/settings/mcp.json` (one workspace) or `~/.kiro/settings/mcp.json` (all workspaces), then sign in with your 3Dsellers account:
+
+```json
+{
+  "mcpServers": {
+    "3dsellers": {
+      "url": "https://api.3dsellers.com/mcp"
+    }
+  }
+}
 ```
 
 #### Other clients
@@ -426,7 +448,7 @@ Yes. Add 3Dsellers from Claude's connector directory, sign in, and ask Claude to
 Yes. 3Dsellers keeps one catalog for every channel, so one connection covers all of them, including publishing a product from one channel to another.
 
 **Which AI assistants work with it?**
-Any assistant that supports remote MCP servers: Claude, ChatGPT, Grok, Claude Code, Cursor, VS Code, Cline, Windsurf, Gemini CLI, Codex CLI, Perplexity, Mistral Le Chat and others.
+Any assistant that supports remote MCP servers: Claude, ChatGPT, Grok, Claude Code, Cursor, VS Code, Cline, Windsurf, Gemini CLI, Kiro, Codex CLI, Perplexity, Mistral Le Chat and others.
 
 **Is there a REST API too?**
 Yes. The same account and token work with the [3Dsellers REST API](https://www.3dsellers.com/channel-integration/3dsellers-api). Reference: [api.3dsellers.com/docs](https://api.3dsellers.com/docs).
@@ -443,6 +465,7 @@ No. The server is hosted and maintained by 3Dsellers. This repository contains d
 - Video: [3Dsellers MCP in under eight minutes](https://www.youtube.com/watch?v=hqkb0MN3nak)
 - Official MCP Registry: `com.3dsellers/mcp`
 - Support: support@3dsellers.com
+- Privacy policy: [3dsellers.com/privacy-policy](https://www.3dsellers.com/privacy-policy)
 
 ## License
 
