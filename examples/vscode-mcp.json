@@ -1,0 +1,11 @@
+{
+  "servers": {
+    "3dsellers": {
+      "type": "http",
+      "url": "https://api.3dsellers.com/mcp",
+      "headers": {
+        "Authorization": "Bearer YOUR_TOKEN_HERE"
+      }
+    }
+  }
+}
