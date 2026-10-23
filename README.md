@@ -2,12 +2,12 @@
 
 # 3Dsellers MCP Server
 
-**A hosted MCP server that lets Claude, ChatGPT, Cursor, VS Code and any MCP-compatible AI assistant run your eBay, Amazon, Walmart, Etsy, Shopify and TikTok Shop stores. 126 tools. Nothing to install, no code and no eBay developer account.**
+**A hosted MCP server that lets Claude, ChatGPT, Cursor, VS Code and any MCP-compatible AI assistant run your eBay, Amazon, Walmart, Etsy, Shopify and TikTok Shop stores. 150+ tools. Nothing to install, no code and no eBay developer account.**
 
 [![Official MCP Registry](https://img.shields.io/badge/MCP%20Registry-com.3dsellers%2Fmcp-2D72E8)](https://registry.modelcontextprotocol.io/v0/servers?search=3dsellers)
 [![Claude connector directory](https://img.shields.io/badge/Claude-connector%20directory-D97757)](https://claude.ai/new#directory/connectors/3dsellers-mcp)
 [![Cursor Directory](https://img.shields.io/badge/Cursor-Directory-000000)](https://cursor.directory/plugins/3dsellers)
-![Tools](https://img.shields.io/badge/tools-126-8957e5)
+![Tools](https://img.shields.io/badge/tools-150%2B-8957e5)
 ![Transport](https://img.shields.io/badge/transport-streamable%20HTTP-blue)
 ![Auth](https://img.shields.io/badge/auth-OAuth%20%7C%20bearer%20token-green)
 
@@ -180,9 +180,9 @@ One connection covers every channel connected to your 3Dsellers account. The AI 
 
 ## Tools
 
-126 tools in 13 groups. **Read** tools only look at your data. **Write** tools make changes, and the assistant asks for your approval before it runs them.
+150+ tools, grouped by area. **Read** tools only look at your data. **Write** tools make changes, and the assistant asks for your approval before it runs them.
 
-### Products & Catalog (20)
+### Products & Catalog
 
 | Tool | What it does | Type |
 | --- | --- | --- |
@@ -207,7 +207,7 @@ One connection covers every channel connected to your 3Dsellers account. The AI 
 | `update-segment` | Change the filter of a saved segment. | Write |
 | `delete-segment` | Delete a saved segment. | Write |
 
-### Listings & Publishing (11)
+### Listings & Publishing
 
 | Tool | What it does | Type |
 | --- | --- | --- |
@@ -223,7 +223,7 @@ One connection covers every channel connected to your 3Dsellers account. The AI 
 | `update-store-category` | Rename or move an eBay store category. | Write |
 | `delete-store-category` | Delete an eBay store category. | Write |
 
-### Inventory (3)
+### Inventory
 
 | Tool | What it does | Type |
 | --- | --- | --- |
@@ -231,7 +231,7 @@ One connection covers every channel connected to your 3Dsellers account. The AI 
 | `set-variation-inventory` | Set the quantity of one variation, such as a size or color. | Write |
 | `set-inventory-sync` | Turn inventory sync on or off for a selling account. | Write |
 
-### Orders (5)
+### Orders
 
 | Tool | What it does | Type |
 | --- | --- | --- |
@@ -241,7 +241,7 @@ One connection covers every channel connected to your 3Dsellers account. The AI 
 | `generate-order-invoice` | Create an invoice for an order. | Write |
 | `get-order-invoice` | Get the invoice of an order. | Read |
 
-### Bulk Actions (5)
+### Bulk Actions
 
 | Tool | What it does | Type |
 | --- | --- | --- |
@@ -251,7 +251,7 @@ One connection covers every channel connected to your 3Dsellers account. The AI 
 | `get-actions` | List the bulk actions you ran and their status. | Read |
 | `get-action` | Track one bulk action until it finishes. | Read |
 
-### CSV Import (12)
+### CSV Import
 
 | Tool | What it does | Type |
 | --- | --- | --- |
@@ -268,7 +268,7 @@ One connection covers every channel connected to your 3Dsellers account. The AI 
 | `delete-import-schedule` | Stop and delete a scheduled import. | Write |
 | `run-import-schedule` | Run a scheduled import right away. | Write |
 
-### Export & Reports (11)
+### Export & Reports
 
 | Tool | What it does | Type |
 | --- | --- | --- |
@@ -284,7 +284,7 @@ One connection covers every channel connected to your 3Dsellers account. The AI 
 | `delete-export-schedule` | Stop and delete a scheduled export. | Write |
 | `run-export-schedule` | Run a scheduled export right away. | Write |
 
-### Categories & Field Mapping (26)
+### Categories & Field Mapping
 
 | Tool | What it does | Type |
 | --- | --- | --- |
@@ -315,7 +315,7 @@ One connection covers every channel connected to your 3Dsellers account. The AI 
 | `clone-mapping-template` | Copy a mapping template to start a new one. | Write |
 | `validate-mapping-template` | Check a mapping template for missing or wrong fields. | Read |
 
-### Helpdesk & Messages (13)
+### Helpdesk & Messages
 
 | Tool | What it does | Type |
 | --- | --- | --- |
@@ -333,7 +333,7 @@ One connection covers every channel connected to your 3Dsellers account. The AI 
 | `update-auto-message` | Change the text or timing of an automatic message. | Write |
 | `delete-auto-message` | Delete an automatic message. | Write |
 
-### Automations (6)
+### Automations
 
 | Tool | What it does | Type |
 | --- | --- | --- |
@@ -344,7 +344,7 @@ One connection covers every channel connected to your 3Dsellers account. The AI 
 | `update-automation` | Change or pause an automation. | Write |
 | `delete-automation` | Delete an automation. | Write |
 
-### Offers (5)
+### Offers
 
 | Tool | What it does | Type |
 | --- | --- | --- |
@@ -354,7 +354,7 @@ One connection covers every channel connected to your 3Dsellers account. The AI 
 | `update-offer-rule` | Change the discount or timing of an offer rule. | Write |
 | `delete-offer-rule` | Delete an offer rule. | Write |
 
-### Listing Designer (6)
+### Listing Designer
 
 | Tool | What it does | Type |
 | --- | --- | --- |
@@ -365,7 +365,7 @@ One connection covers every channel connected to your 3Dsellers account. The AI 
 | `get-listing-designer-auto-apply` | See which template applies to new listings in each store. | Read |
 | `set-listing-designer-auto-apply` | Choose the template that applies to new listings in a store. | Write |
 
-### Selling Accounts (3)
+### Selling Accounts
 
 | Tool | What it does | Type |
 | --- | --- | --- |
